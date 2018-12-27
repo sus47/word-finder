@@ -4,7 +4,7 @@ from itertools import permutations
 language = enchant.Dict("en_US")
 
 def get_permutation(letter_list, length=None):
-    permutation = permutations(letter_list, length)
+    permutation = set(permutations(letter_list, length))
     words = permutation_processor(permutation)
     display_words(words)
 
